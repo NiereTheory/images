@@ -9,7 +9,7 @@ parameters:
   image1:
     type: boolean
     default: false
-  iamge2:
+  image2:
     type: boolean
     default: false
     
