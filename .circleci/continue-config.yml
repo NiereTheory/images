@@ -9,6 +9,9 @@ parameters:
   image1:
     type: boolean
     default: false
+  image1str:
+    type: string
+    default: ""
   image2:
     type: boolean
     default: false
@@ -20,6 +23,8 @@ jobs:
         - run: 
             command: |
               echo "img one"
+              echo << pipeline.parameters.image1str >>
+              echo << pipeline.git.branch >>
               
   project_two: 
       executor: base
