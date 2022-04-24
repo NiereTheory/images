@@ -23,34 +23,11 @@ jobs:
         - run: 
             command: |
               echo "img one"
-              echo << pipeline.parameters.image1str >>
-              echo << pipeline.git.branch >>
-              
-  project_two: 
-      executor: base
-      steps:
-        - run: 
-            command: |
-              echo "img two" 
-              
-  all_projects: 
-      executor: base
-      steps:
-        - run: 
-            command: |
-              echo "all"   
+              echo << pipeline.parameters.image1 >>
+              echo << pipeline.parameters.image2 >>
+              echo << pipeline.git.branch >>           
               
 workflows:
   build-1:
-    when: 
-      or: 
-        - << pipeline.parameters.image1 >>
     jobs:
       - project_one
-      
-  build-2:
-    when: 
-      or: 
-        - << pipeline.parameters.image2 >>  
-    jobs:
-      - project_two
