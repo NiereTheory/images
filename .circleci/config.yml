@@ -13,4 +13,5 @@ workflows:
           config-path: .circleci/continue-config.yml
           mapping: |
             image1/.* image1 true
+            image1/.* image1str thisvalueisone
             image2/.* image2 true
