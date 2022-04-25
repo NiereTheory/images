@@ -9,9 +9,9 @@ parameters:
   image1:
     type: boolean
     default: false
-  image1str:
+  image1_str:
     type: string
-    default: ""
+    default: "no"
   image2:
     type: boolean
     default: false
@@ -24,6 +24,7 @@ jobs:
             command: |
               echo "img one"
               echo << pipeline.parameters.image1 >>
+              echo << pipeline.parameters.image1_str >>
               echo << pipeline.parameters.image2 >>
               echo << pipeline.git.branch >>           
               
