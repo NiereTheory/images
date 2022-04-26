@@ -22,7 +22,6 @@ jobs:
       steps:
         - run: 
             command: |
-              echo "img one"
               echo << pipeline.parameters.image1 >>
               echo << pipeline.parameters.image1_str >>
               echo << pipeline.parameters.image2 >>
