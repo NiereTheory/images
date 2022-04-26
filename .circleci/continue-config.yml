@@ -25,7 +25,7 @@ jobs:
               echo << pipeline.parameters.image1 >>
               echo << pipeline.parameters.image2 >>
               echo << pipeline.git.branch >>
-              ls
+              echo $(ls)
               bash runit.sh << pipeline.parameters.image1 >> << pipeline.parameters.image2 >>
               
 workflows:
