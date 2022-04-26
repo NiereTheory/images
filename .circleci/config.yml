@@ -12,6 +12,5 @@ workflows:
           base-revision: main
           config-path: .circleci/continue-config.yml
           mapping: |
-            image1/.* image1 true
             image1/.* image1_str "yes in image1"
             image2/.* image2 true
