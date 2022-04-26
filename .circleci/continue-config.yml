@@ -23,7 +23,6 @@ jobs:
         - run: 
             command: |
               echo << pipeline.parameters.image1 >>
-              echo << pipeline.parameters.image1_str >>
               echo << pipeline.parameters.image2 >>
               echo << pipeline.git.branch >>           
               
