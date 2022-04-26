@@ -7,11 +7,11 @@ executors:
 
 parameters:
   image1:
-    type: boolean
-    default: false
-  image1_str:
     type: string
-    default: notreal
+    default: ''
+#   image1_str:
+#     type: string
+#     default: notreal
   image2:
     type: boolean
     default: false
