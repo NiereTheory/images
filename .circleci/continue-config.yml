@@ -29,5 +29,9 @@ jobs:
               
 workflows:
   build-1:
+    when: 
+      or: 
+        - << pipeline.parameters.image1 >>
+        - << pipeline.parameters.image2 >> 
     jobs:
       - project_one
