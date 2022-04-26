@@ -11,7 +11,7 @@ parameters:
     default: false
   image1_str:
     type: string
-    default: "no"
+    default: notreal
   image2:
     type: boolean
     default: false
