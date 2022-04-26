@@ -20,6 +20,7 @@ jobs:
   project_one:
       executor: base
       steps:
+        - checkout
         - run: 
             command: |
               echo << pipeline.parameters.image1 >>
