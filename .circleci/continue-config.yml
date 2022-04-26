@@ -24,7 +24,8 @@ jobs:
             command: |
               echo << pipeline.parameters.image1 >>
               echo << pipeline.parameters.image2 >>
-              echo << pipeline.git.branch >>           
+              echo << pipeline.git.branch >>
+              bash runit.sh << pipeline.parameters.image1 >> << pipeline.parameters.image2 >>
               
 workflows:
   build-1:
