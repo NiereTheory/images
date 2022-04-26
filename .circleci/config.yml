@@ -12,5 +12,5 @@ workflows:
           base-revision: main
           config-path: .circleci/continue-config.yml
           mapping: |
-            image1/.* image1 {"path":"image1"}
+            image1/.* image1 true
             image2/.* image2 true
